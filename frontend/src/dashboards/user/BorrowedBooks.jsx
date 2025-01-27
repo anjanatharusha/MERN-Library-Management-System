@@ -11,6 +11,7 @@ const columns = [
   "Borrowed Date",
   "Due Date",
   "Days Left",
+  "Fine",
   "Renew Status",
 ];
 
@@ -106,6 +107,7 @@ const BorrowedBooks = () => {
                   <td>{formatDate(item?.borrowDate)}</td>
                   <td>{formatDate(item?.dueDate)}</td>
                   <td>{calculateDaysLeft(item?.dueDate)}</td>
+                  <td>{item?.fine}</td>
                   <td>
                     {item?.renewStatus === "None" ? (
                       <button
