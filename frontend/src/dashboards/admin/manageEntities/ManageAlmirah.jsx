@@ -51,7 +51,7 @@ const ManageAlmirah = () => {
         setFormData(initialState);
         fetchAlmirahs();
         setShowAddNewModel(false);
-        return "Almirah added successfully..";
+        return "Cupboard added successfully..";
       },
       error: (err) => {
         console.log(err);
@@ -72,7 +72,7 @@ const ManageAlmirah = () => {
         setFormData(initialState);
         fetchAlmirahs();
         setShowUpdateModel(false);
-        return "Almirah updated successfully..";
+        return "Cupboard updated successfully..";
       },
       error: (err) => {
         console.log(err);
@@ -128,7 +128,7 @@ const ManageAlmirah = () => {
   return (
     <div className="manage__section bg">
       <div className="header">
-        <h2>Manage Almirahs</h2>
+        <h2>Manage Cupboard</h2>
         <div>
           <button
             className="btn btn__secondary"
@@ -147,7 +147,7 @@ const ManageAlmirah = () => {
       <div className="filter">
         <input
           type="text"
-          placeholder="Search almirahs...."
+          placeholder="Search Cupboards...."
           className="background__accent text"
           value={query}
           onChange={(e) => {
@@ -211,16 +211,16 @@ const ManageAlmirah = () => {
 
       {/* ADD NEW CATEGORY FORM */}
       <Modal
-        title="ADD NEW ALMIRAH"
+        title="ADD NEW CUPBOARD"
         show={showAddNewModel}
         onClose={handleCloseAddNewModel}
       >
         <form onSubmit={handleAddNew}>
           <div className="form-control">
-            <label htmlFor="subject">Almirah Subject</label>
+            <label htmlFor="subject">Cupboard Subject</label>
             <input
               type="text"
-              placeholder="Enter almirah subject"
+              placeholder="Enter Cupboard subject"
               name="subject"
               className="bg text__color"
               value={formData.subject}
@@ -229,10 +229,10 @@ const ManageAlmirah = () => {
             />
           </div>
           <div className="form-control">
-            <label htmlFor="number">Almirah Number</label>
+            <label htmlFor="number">Cupboard Number</label>
             <input
               type="text"
-              placeholder="Enter almirah number"
+              placeholder="Enter Cupboard number"
               name="number"
               className="bg text__color"
               value={formData.number}
@@ -257,16 +257,16 @@ const ManageAlmirah = () => {
 
       {/* UPDATE ALMIRAH FORM */}
       <Modal
-        title="UPDATE ALMIRAH"
+        title="UPDATE Cupboard"
         show={showUpdateModel}
         onClose={handleCloseUpdateModel}
       >
         <form onSubmit={handleUpdate}>
           <div className="form-control">
-            <label htmlFor="subject">Almirah Subject</label>
+            <label htmlFor="subject">Cupboard Subject</label>
             <input
               type="text"
-              placeholder="Enter almirah subject"
+              placeholder="Enter Cupboard subject"
               name="subject"
               className="bg text__color"
               value={formData.subject}
@@ -275,10 +275,10 @@ const ManageAlmirah = () => {
             />
           </div>
           <div className="form-control">
-            <label htmlFor="number">Almirah Number</label>
+            <label htmlFor="number">Cupboard Number</label>
             <input
               type="text"
-              placeholder="Enter almirah number"
+              placeholder="Enter Cupboard number"
               name="number"
               className="bg text__color"
               value={formData.number}

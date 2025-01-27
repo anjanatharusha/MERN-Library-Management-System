@@ -14,6 +14,7 @@ import { useState } from "react";
 import { BASE_URL, logout } from "../../../http";
 import { setAuth } from "../../../store/slices/authSlice";
 import profileImage from "../../../assets/avatar.svg";
+import logo from "../../../assets/library-favicon.png";
 
 const Header = () => {
   const { theme } = useSelector((state) => state.theme);
@@ -37,16 +38,16 @@ const Header = () => {
         <span>Discover, Learn, Thrive: Dive into our Library!</span>
         <div>
           <BiPhoneCall />
-          <span>030339845224</span>
+          <span>0779963540</span>
           <AiOutlineMail />
-          <span>ggclib@gmail.com</span>
+          <span>info@vajirarama.lk</span>
         </div>
       </div>
 
       <nav className="bg__accent">
         <div className="logo text__primary">
           <GiBookAura className="logo__icon" />
-          <span>GGC Library</span>
+          <span>Sri Vajiraramaya Library</span>
         </div>
         <div className="center">
           <NavLink to="/" className="text__color ">

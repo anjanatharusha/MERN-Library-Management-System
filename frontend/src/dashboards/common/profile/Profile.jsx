@@ -75,7 +75,7 @@ const Profile = () => {
               <td>{user?.name}</td>
             </tr>
             <tr>
-              <th>Father Name</th>
+              <th>Last Name</th>
               <td>{user?.fatherName}</td>
             </tr>
             <tr>

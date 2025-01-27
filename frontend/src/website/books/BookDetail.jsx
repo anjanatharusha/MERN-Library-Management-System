@@ -133,7 +133,7 @@ const BookDetail = () => {
             {book?.category?.name}
           </p>
           <p>
-            <span>Almirah :</span> {book?.almirah?.number} (
+            <span>Cupboard :</span> {book?.almirah?.number} (
             {book?.almirah?.subject})
           </p>
           <p>
