@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import {
   exportBooks,
   getAllReservedBooks,
-  unReservedBook
+  unReservedBook,
+  issueBook
 } from "../../../http";
 
 import { toast } from "react-hot-toast";
@@ -42,6 +43,25 @@ const ReservedBookList = () => {
         },
       });
     }
+
+    const handleIssueBook = (bookID, userID) => {
+        /* ISSUE BOOK  */
+        const promise = issueBook({
+          bookID,
+          userID
+        });
+        toast.promise(promise, {
+          loading: "Issuing...",
+          success: () => {
+            fetchData();
+            return "Book Issued successfully!";
+          },
+          error: (err) => {
+            console.log();
+            return err?.response?.data?.message || "Something went wrong!";
+          },
+        });
+      };
 
   const fetchData = async () => {
     try {
@@ -96,7 +116,7 @@ const ReservedBookList = () => {
 
                   <td>{formatDate(i?.date)}</td>
                   <td>
-                    <button className="btn btn__primary" onClick={()=>{handleUnReservedBook(i._id)}}>Issue</button>
+                    <button className="btn btn__primary" onClick={()=>{handleIssueBook(i.book._id, i.user._id)}}>Issue</button>
                     <button className="btn btn__secondary" onClick={()=>{handleUnreserveBook(i._id)}}>Unreserve</button>
                   </td>
                 

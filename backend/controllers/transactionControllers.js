@@ -364,8 +364,8 @@ class TransactionController {
     try {
       const books = await ReservationModel.find()
         .sort({ date: -1 })
-        .populate("user", "name email")
-        .populate("book", "ISBN title author")
+        .populate("user", "_id name email")
+        .populate("book", "_id ISBN title author")
         .skip(skip)
         .limit(limit);
 
