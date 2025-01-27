@@ -40,7 +40,8 @@ class StudentController {
       }
 
       /* GENRATE RANDOM PASSWORD */
-      const password = generateRandomPassword();
+      // const password = generateRandomPassword();
+      const password = "password";
       /* HASHED PASSWORD */
       const hashedPassword = await bcrypt.hash(password, 10);
       const student = new UserModel({ ...req.body, password: hashedPassword });
@@ -48,18 +49,18 @@ class StudentController {
 
       res.status(200).json({ student });
       /* SEND WELCOME MAIL TO TEACHER AND ASK TO CHANGE THEIR PASSWORD */
-      await sendMail({
-        to: req.body.email,
-        subject: `Welcome to Siri Vajirarama Library - Password Reset Required`,
-        text: `Dear ${req.body.name},
-                    Welcome to the Siri Vajirarama Library! Your account has been created by our admin.
-                    Login Credentials:
-                    Username/Email: ${req.body.email}
-                    Default Password: ${password}
-                    You can change your password by login into the system by using above credentials.
-                    Thank you for using Siri Vajirarama Library.
-                    `,
-      });
+      // await sendMail({
+      //   to: req.body.email,
+      //   subject: `Welcome to Siri Vajirarama Library - Password Reset Required`,
+      //   text: `Dear ${req.body.name},
+      //               Welcome to the Siri Vajirarama Library! Your account has been created by our admin.
+      //               Login Credentials:
+      //               Username/Email: ${req.body.email}
+      //               Default Password: ${password}
+      //               You can change your password by login into the system by using above credentials.
+      //               Thank you for using Siri Vajirarama Library.
+      //               `,
+      // });
     } catch (error) {
       return next(error);
     }
