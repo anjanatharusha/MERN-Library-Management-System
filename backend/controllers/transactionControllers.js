@@ -170,7 +170,7 @@ class TransactionController {
           await reservedBook.deleteOne();
         } else {
           return next(
-            ErrorHandlerService.badRequest("Book Reserved by someone !")
+            ErrorHandlerService.badRequest("Book Reserved by someone else!")
           );
         }
       }
@@ -198,7 +198,7 @@ class TransactionController {
       /* CHANGE STAUTUS OF BOOK  */
       book.status = "Issued";
       await book.save();
-      return res.status(200).json({ msg: "Book Issued Successfully !" });
+      return res.status(200).json({ msg: "Book Issued Successfully!" });
     } catch (error) {
       next(error);
     }

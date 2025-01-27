@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   exportBooks,
   getAllReservedBooks,
+  unReservedBook
 } from "../../../http";
 
 import { toast } from "react-hot-toast";
@@ -26,6 +27,21 @@ const ReservedBookList = () => {
       },
     });
   };
+
+  const handleUnreserveBook = async (_id) => {
+      const promise = unReservedBook(_id);
+      toast.promise(promise, {
+        loading: "Loading...",
+        success: () => {
+          fetchData();
+          return "Book Unreserved  successfully";
+        },
+        error: (err) => {
+          console.log();
+          return err?.response?.data?.message || "Something went wrong :(";
+        },
+      });
+    }
 
   const fetchData = async () => {
     try {
@@ -60,6 +76,7 @@ const ReservedBookList = () => {
               <td>User Name</td>
               <td>Roll Number/Email</td>
               <td>Reserved Date</td>
+              <td>Actions</td>
             </tr>
           </thead>
           <tbody>
@@ -78,6 +95,10 @@ const ReservedBookList = () => {
                   </td>
 
                   <td>{formatDate(i?.date)}</td>
+                  <td>
+                    <button className="btn btn__primary" onClick={()=>{handleUnReservedBook(i._id)}}>Issue</button>
+                    <button className="btn btn__secondary" onClick={()=>{handleUnreserveBook(i._id)}}>Unreserve</button>
+                  </td>
                 
                 </tr>
               );
