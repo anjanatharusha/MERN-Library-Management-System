@@ -78,9 +78,12 @@ const studentValidationSchema = Joi.object({
     .max(30)
     .pattern(/^[A-Za-z\s]+$/),
   email: Joi.string().required().email(),
+  password: Joi.string().optional(),
   rollNumber: Joi.string().required(),
-  departement: Joi.string().required(),
-  batch: Joi.string().required(),
+  departement: Joi.string().optional(),
+  batch: Joi.string().optional(),
+  // departement: Joi.string().required(),
+  // batch: Joi.string().required(),
   accountStatus: Joi.boolean().optional(),
 }).messages(customErrorMessages);
 

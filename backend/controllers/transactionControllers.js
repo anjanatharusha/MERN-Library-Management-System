@@ -170,7 +170,7 @@ class TransactionController {
           await reservedBook.deleteOne();
         } else {
           return next(
-            ErrorHandlerService.badRequest("Book Reserved by someone !")
+            ErrorHandlerService.badRequest("Book Reserved by someone else!")
           );
         }
       }
@@ -198,7 +198,7 @@ class TransactionController {
       /* CHANGE STAUTUS OF BOOK  */
       book.status = "Issued";
       await book.save();
-      return res.status(200).json({ msg: "Book Issued Successfully !" });
+      return res.status(200).json({ msg: "Book Issued Successfully!" });
     } catch (error) {
       next(error);
     }
@@ -364,8 +364,8 @@ class TransactionController {
     try {
       const books = await ReservationModel.find()
         .sort({ date: -1 })
-        .populate("user", "name email")
-        .populate("book", "ISBN title author")
+        .populate("user", "_id name email")
+        .populate("book", "_id ISBN title author")
         .skip(skip)
         .limit(limit);
 
@@ -509,7 +509,8 @@ class TransactionController {
         Thank you for using our library services.
 
         Best regards,
-        GGC Library Management System Admin
+        Librarian,
+        Siri Vajirarama Library
           `,
       });
 
