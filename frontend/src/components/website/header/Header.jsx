@@ -34,19 +34,19 @@ const Header = () => {
   return (
     <header>
       <div className="topbar bg__secondary text__color">
-        <span>Discover, Learn, Thrive: Dive into our Library!</span>
+        <span>Cultivate the good and the true</span>
         <div>
           <BiPhoneCall />
-          <span>030339845224</span>
+          <span>+94(0)11 2584202</span>
           <AiOutlineMail />
-          <span>ggclib@gmail.com</span>
+          <span>info@vajirarama.lk</span>
         </div>
       </div>
 
       <nav className="bg__accent">
         <div className="logo text__primary">
           <GiBookAura className="logo__icon" />
-          <span>GGC Library</span>
+          <span>Siri Vajirārāma Library</span>
         </div>
         <div className="center">
           <NavLink to="/" className="text__color ">

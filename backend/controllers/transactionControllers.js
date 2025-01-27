@@ -509,7 +509,7 @@ class TransactionController {
         Thank you for using our library services.
 
         Best regards,
-        GGC Library Management System Admin
+        Siri Vajirārāma Library Management System Admin
           `,
       });
 

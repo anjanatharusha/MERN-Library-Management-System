@@ -10,12 +10,13 @@ const Footer = () => {
         <div className="box1">
           <div className="logo text__primary">
             <GiBookAura className="icon" />
-            <h4>GGC Library</h4>
+            <h4>Siri Vajirārāma Library</h4>
           </div>
           <p style={{ marginTop: "8px", lineHeight: "1.5rem" }}>
-            Gateway to knowledge, discovery, and lifelong learning for all GGC
-            students, faculty, and staff.: A welcoming and inclusive space for
-            all learners to come together and learn.
+          The Siri Vajirarama Library, inaugurated by the most venerable Palane Siri Vajirajanana Mahanayake Thero, 
+          a renowned monk of the 20th century, was a repository of knowledge of the venerable monks and scholars of 
+          that era who worked to bring Buddhism to the world. It is unquestionably recognized as a globally renowned 
+          Sri Lankan Buddhist library.
           </p>
         </div>
         <div className="box2">
@@ -54,21 +55,21 @@ const Footer = () => {
           <h4>CONTACT</h4>
           <div className="item">
             <AiOutlineHome className="icon__home" />
-            <span>Govt.Graduate College Taneyala, Jhelum</span>
+            <span>Vajira Road, Bambalapitiya,Colombo 04, Sri Lanka.</span>
           </div>
           <div className="item">
             <AiOutlineMail className="icon" />
-            <span>ggclib@gmail.com</span>
+            <span>info@vajirarama.lk</span>
           </div>
           <div className="item">
             <AiOutlinePhone className="icon" />
-            <span>03445047347234</span>
+            <span>+94(0)11 2584202</span>
           </div>
         </div>
       </div>
       <div className="bottom">
         <span>
-          &copy;2023 Copyright : GGC Library Management System, Jhelum
+          &copy;2025 Copyright : Siri Vajiraramaya Colombo 04
         </span>
       </div>
     </footer>

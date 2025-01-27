@@ -40,10 +40,9 @@ const Home = () => {
     <div className="bg text__color">
       {/* Hero Section */}
       <section className="hero ">
-        <h1>Welcomet to Govt. Graduate College,Jhelum Library</h1>
+        <h1>Welcomet to Siri Vajirārāma Temple Library</h1>
         <span className="subheading">
-          Explore our vast collection of books and resources.
-        </span>
+        Apārutā tesaṃ amatassa dvārā - Open are the doors to the deathless.</span>
 
         <Link to="/books" className="btn btn__secondary">
           Browse Catalog
@@ -55,22 +54,11 @@ const Home = () => {
       <section className="welcome">
         <div className="left">
           <div className="heading">
-            <h1>Welcome Message </h1>
+           
           </div>
           <p>
-            Welcome to the Govt. Graduate College, Jhelum Library Management
-            System !
-          </p>
-          <p>
-            Our modern, fully automated college library is undoubtedly a
-            state-of-the-art Information Resource Center which fulfills
-            ever-evolving needs of our academic clientele. We are dedicated to
-            support the curriculum and educational mission of the college. The
-            aim of the GGC Library is to deliver the best print, digital and
-            online information resources and reference services to support your
-            teaching, learning, and research activities. We also provide
-            conducive environment and wonderful spaces for research, study and
-            collaboration.
+          Taking into consideration the modern world trend in library and information field, Siri Vajirarama Library has taken steps to initiate a Siri Vajirarama Digital Library and Repository. The Digital Library uses the despearse Software to maintain the 
+          digital collection, providing users with seamless access to a wide range of resources such as e-books, research papers, journals, and multimedia content. The Despearse software enables efficient cataloging, indexing, and retrieval of digital materials, ensuring a user-friendly interface and advanced search capabilities for the library's patrons.
           </p>
         </div>
 

@@ -29,7 +29,7 @@ function AppBar({ open, setOpen }) {
         {/* logo */}
         <Link to="/" className="logo text__primary">
           <GiBookAura className="logo__icon" />
-          <span>GGC Library</span>
+          <span>Siri Vajirārāma Library</span>
         </Link>
       </div>
 
