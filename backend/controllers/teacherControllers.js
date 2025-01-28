@@ -39,6 +39,7 @@ class TeacherController {
       res.status(200).json({ teacher });
 
       /* SEND WELCOME MAIL TO TEACHER AND ASK TO CHANGE THEIR PASSWORD */
+
       // await sendMail({
       //   to: req.body.email,
       //   subject: `Welcome to GGC Library Management System - Password Reset Required`,
@@ -51,6 +52,7 @@ class TeacherController {
       //           Thank you for using GGC Library Management System.
       //           `,
       // });
+
     } catch (error) {
       next(error);
     }

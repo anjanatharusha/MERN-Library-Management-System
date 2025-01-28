@@ -21,7 +21,11 @@ const AboutUs = () => {
       <Hero
         title="Mission"
         text={
+// Dilanga
+//           "The mission of the Siri Vajirārāma Library is to achieve excellence in the provision and promotion of information services to meet the research, teaching and learning needs of the College. We are committed to help the students and the faculty to take advantage of these resources. An effective use of information resources is a necessary precondition to an academic success and even throughout life. It is our goal at the libraries to provide excellent service to students and faculty that will advance each user’s learning, teaching, and research experience at the Government Graduate College ,Jhelum."
+
           "The Vajiraramaya Library is dedicated to preserving and promoting Buddhist literature and related disciplines. Our mission is to provide access to a comprehensive collection of texts that support the study and practice of Buddhism. We aim to serve as a center for learning, where individuals can deepen their understanding of the Dhamma and its application in daily life. Through our resources and services, we strive to uphold the temple’s tradition of education and spiritual development, contributing to the growth of an informed and compassionate community."
+
         }
         image={mission_image}
       />
@@ -29,7 +33,11 @@ const AboutUs = () => {
       <Hero
         title="Collection"
         text={
+//            Dilanga
+//           "The Siri Vajirārāma Library collection of scholarly materials catering to the needs of the College Community, comprising students to staff members, teachers/scholars, and visiting researchers. Total Collection of all the libraries are about 25000/ volumes. The Libraries vary widely in size and quantity of their stock but include well organized collections of considerable value. Our book collection contains rare editions, reference volumes, critical guides and latest releases. We have a large collection of research journals/periodicals including magazines."
+
           "Our library boasts an extensive collection of over 8,000 books and 210 Ola leaf manuscripts, some of which are exceedingly rare. The collection encompasses works in Pali, Sanskrit, Burmese, Sinhala, and English, covering a wide range of topics including Buddhist philosophy, history, and culture. Notably, the library houses publications by renowned resident monks such as Ven. Narada and Ven. Piyadassi, whose teachings have reached audiences worldwide. This diverse assemblage of texts makes the Vajiraramaya Library a valuable repository of Buddhist knowledge and a testament to the temple’s scholarly heritage."
+
         }
         image={collect_image}
         reverse={true}

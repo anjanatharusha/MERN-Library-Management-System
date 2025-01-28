@@ -197,9 +197,11 @@ class AuthController {
       // console.log(`Email Send ! Your password reset link is ${resetToken}`);
       await sendMail({
         to: user.email,
+
         // from: "library@gmail.com",
         subject: "Siri Vajirarama Library Password Reset",
         text: `Hello ${user.name} ! Your password reset link is  http://localhost:5173/new-password/${resetToken}`,
+
       });
       return res.status(200).json({ msg: "Email Sent" });
     } catch (error) {
