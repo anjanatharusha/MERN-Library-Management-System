@@ -43,7 +43,7 @@ class AuthController {
 
     /* GENERAT TOKENS  */
     const { accessToken, refreshToken } = await tokenService.genrateTokens({
-      _id: user._id,
+      email: user.email,
       role: user.role,
     });
 

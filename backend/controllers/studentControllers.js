@@ -41,10 +41,10 @@ class StudentController {
 
       /* GENRATE RANDOM PASSWORD */
       // const password = generateRandomPassword();
-      const password = "password";
+      // const password = "password";
       /* HASHED PASSWORD */
-      const hashedPassword = await bcrypt.hash(password, 10);
-      const student = new UserModel({ ...req.body, password: hashedPassword });
+      // const hashedPassword = await bcrypt.hash(password, 10);
+      const student = new UserModel({ ...req.body });
       await student.save();
 
       res.status(200).json({ student });
