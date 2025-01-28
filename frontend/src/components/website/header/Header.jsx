@@ -46,7 +46,7 @@ const Header = () => {
 
       <nav className="bg__accent">
         <div className="logo text__primary">
-          <GiBookAura className="logo__icon" />
+          <logo className="logo__icon" />
           <span>Siri Vajirārāma Library</span>
         </div>
         <div className="center">

@@ -94,7 +94,7 @@ const UserDashboardLayout = () => {
           link : "profile",
           icon : <FaUserAlt/>
         },
-        {
+        /*{
           id : 2,
           text : "Notifications",
           link : "borrowed-books",
@@ -114,7 +114,7 @@ const UserDashboardLayout = () => {
             link : "clearance-form",
             icon : <FaWpforms/>
           })
-        }
+        }*/
         
       ] 
     },

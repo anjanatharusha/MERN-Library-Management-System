@@ -152,14 +152,14 @@ const ManageTeacher = () => {
       <div className="header">
         <h2>Manage Teachers</h2>
         <div>
-          <button
+          {/* <button
             className="btn btn__secondary"
             onClick={() => {
               setShowAddNewModel(true);
             }}
           >
             Add New
-          </button>
+          </button>*/}
           <button className="btn btn__secondary" onClick={handleExport}>
             Export to CSV
           </button>
@@ -201,7 +201,7 @@ const ManageTeacher = () => {
             <tr>
               <td>Name</td>
               <td>Image</td>
-              <td>Father Name</td>
+              <td>Last Name</td>
               <td>Email</td>
               <td>Actions</td>
             </tr>
@@ -268,10 +268,10 @@ const ManageTeacher = () => {
             />
           </div>
           <div className="form-control">
-            <label htmlFor="fatherName">Father Name</label>
+            <label htmlFor="fatherName">Last Name</label>
             <input
               type="text"
-              placeholder="Enter father name"
+              placeholder="Enter last name"
               name="fatherName"
               className="bg text__color"
               value={formData.fatherName}
@@ -327,10 +327,10 @@ const ManageTeacher = () => {
             />
           </div>
           <div className="form-control">
-            <label htmlFor="fatherName">Father Name</label>
+            <label htmlFor="fatherName">Last Name</label>
             <input
               type="text"
-              placeholder="Enter father name"
+              placeholder="Enter last name"
               name="fatherName"
               className="bg text__color"
               value={formData.fatherName}

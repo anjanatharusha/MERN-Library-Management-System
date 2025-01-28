@@ -75,7 +75,7 @@ const menu = [
         link: "manage-teachers",
         icon: <FaUsers />,
       },
-      {
+      /*{
         id: 3,
         text: "Batches",
         link: "manage-batches",
@@ -86,7 +86,7 @@ const menu = [
         text: "Departements",
         link: "manage-departements",
         icon: <BiCategoryAlt />,
-      },
+      },*/
     ],
   },
   {
