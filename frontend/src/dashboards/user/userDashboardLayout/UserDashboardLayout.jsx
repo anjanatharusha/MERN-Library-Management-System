@@ -47,15 +47,15 @@ const UserDashboardLayout = () => {
           link : "returned-books",
           icon : <ImBooks/>
         },
-        {
+        /*{
           id : 4,
           text : "Recommended",
           link : "borrowed-books",
           icon : <FaBook/>
-        }
+        }*/
       ] 
     },
-    {
+ /*   {
       ...((auth?.user?.role === "HOD" ||auth?.user?.role === "Clerk"  ) && {
         id: 6,
         title : "Clearance Requests",
@@ -82,7 +82,7 @@ const UserDashboardLayout = () => {
           
         ] 
       })
-    },
+    },*/
   
     {
       id: 3,
