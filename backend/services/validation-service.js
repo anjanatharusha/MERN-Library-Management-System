@@ -56,6 +56,7 @@ const teacherValidationSchema = Joi.object({
     .max(30)
     .pattern(/^[A-Za-z\s]+$/),
   email: Joi.string().required().email(),
+  password: Joi.string().required(),
 }).messages(customErrorMessages);
 
 const contactUsValidationSchema = Joi.object({
@@ -78,9 +79,12 @@ const studentValidationSchema = Joi.object({
     .max(30)
     .pattern(/^[A-Za-z\s]+$/),
   email: Joi.string().required().email(),
+  password: Joi.string().required(),
   rollNumber: Joi.string().required(),
-  departement: Joi.string().required(),
-  batch: Joi.string().required(),
+  departement: Joi.string().optional(),
+  batch: Joi.string().optional(),
+  // departement: Joi.string().required(),
+  // batch: Joi.string().required(),
   accountStatus: Joi.boolean().optional(),
 }).messages(customErrorMessages);
 

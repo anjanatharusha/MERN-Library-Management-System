@@ -14,6 +14,7 @@ import { useState } from "react";
 import { BASE_URL, logout } from "../../../http";
 import { setAuth } from "../../../store/slices/authSlice";
 import profileImage from "../../../assets/avatar.svg";
+import logo from "../../../assets/library-favicon.png";
 
 const Header = () => {
   const { theme } = useSelector((state) => state.theme);

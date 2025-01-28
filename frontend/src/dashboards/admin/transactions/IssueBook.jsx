@@ -51,24 +51,24 @@ const IssueBook = () => {
   const handleIssueBook = () => {
     /* CHECK USER AND BOOK FOUND OR NOT ?  */
     if (!userData || !bookData) {
-      toast.error("Please select both book and user first !");
+      toast.error("Please select both book and user first!");
       return;
     }
     /* CHECK IF USER ALREADY BORROWED BOOKS AND EXCEED LIMIT */
     if (userData?.hasExceededLimit) {
-      toast.error(`Limit exceeded !`);
+      toast.error(`Limit exceeded!`);
       return;
     }
     /* CHECK IF BOOK STATUS IS ISSUED ? */
     if (bookData?.book?.status === "Issued") {
-      toast.error(`Book alraeady issued to someone!`);
+      toast.error(`Book alraeady issued!`);
       return;
     }
 
     /* CHECK SAME USER RESERVED ? */
     if (bookData?.book?.status === "Reserved") {
       if (userData?.user?.email !== bookData?.reservedAlready?.user?.email) {
-        toast.error("Book reserved by someone !");
+        toast.error("Book reserved by someone else!");
         return;
       }
     }
@@ -83,11 +83,11 @@ const IssueBook = () => {
       success: (data) => {
         setBookData(null);
         setUserData(null);
-        return "Book Issued successfully..";
+        return "Book Issued successfully!";
       },
       error: (err) => {
         console.log();
-        return err?.response?.data?.message || "Something went wrong !";
+        return err?.response?.data?.message || "Something went wrong!";
       },
     });
   };
@@ -236,7 +236,7 @@ const IssueBook = () => {
 
           {/* ISSUE BUTTON */}
           <button className="btn btn__primary" onClick={handleIssueBook}>
-            ISSUED BOOK
+            ISSUE BOOK
           </button>
         </div>
       </div>

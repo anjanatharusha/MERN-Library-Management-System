@@ -6,6 +6,7 @@ function Loader() {
   return (
     <div className="spinner text__color">
       <h1>Siri Vajirārāma Library Management System</h1>
+
       <FaSpinner className="loader-icon" />
       <p>Loading...</p>
     </div>

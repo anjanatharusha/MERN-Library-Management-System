@@ -113,13 +113,13 @@ const menu = [
       },
       {
         id: 3,
-        text: "Almirahs",
+        text: "Cupboards",
         link: "manage-almirahs",
         icon: <FaList />,
       },
     ],
   },
-  {
+ /* {
     id: 6,
     title: "Clearance Requests",
     listItems: [
@@ -143,7 +143,7 @@ const menu = [
         icon: <MdCancel />,
       },
     ],
-  },
+  },*/
 
   {
     id: 7,

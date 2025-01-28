@@ -3,7 +3,7 @@ import { unReservedBook, getReservedBooks } from '../../http';
 import { formatDate } from '../../utils/formatDate';
 import {toast} from 'react-hot-toast';
 
-const columns = ["ISBN","Title","Author","Reserved Date","Due Date","Actions"];
+const columns = ["ISBN","Title","Author","Reserved Date","Actions"];
 
 function calculateDueDate(borrowedDateISOString) {
   // Convert the borrowed date string to a Date object
@@ -36,11 +36,11 @@ const ReservedBooks = () => {
       loading: "Loading...",
       success: (response) => {
         setBooks(response?.data?.reservedBooks);
-        return "Book Unreserved  successfully..";
+        return "Book Unreserved  successfully";
       },
       error: (err) => {
         console.log();
-        return err?.response?.data?.message || "Something went wrong !";
+        return err?.response?.data?.message || "Something went wrong!";
       },
     });
   }
@@ -74,8 +74,8 @@ const ReservedBooks = () => {
                 <td>{item?.book?.title}</td>
                 <td>{item?.book?.author}</td>
                 <td>{formatDate(item?.date)}</td>
-                <td>{formatDate(calculateDueDate(item?.date))}</td>
-                <td><button className="btn btn__secondary" onClick={()=>{handleUnReservedBook(item._id)}}>Un reserved</button></td>
+                {/* <td>{formatDate(calculateDueDate(item?.date))}</td> */}
+                <td><button className="btn btn__secondary" onClick={()=>{handleUnReservedBook(item._id)}}>Unreserve</button></td>
               </tr>
                 })
               }
