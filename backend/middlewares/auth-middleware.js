@@ -1,8 +1,12 @@
 import { ErrorHandlerService,tokenService } from "../services/index.js";
 
-const authMiddleware = async (req,res,next) => {  
+const authMiddleware = async (req,res,next) => { 
+  console.log(req);
+  console.log(req.cookies); 
     const { accessToken } = req.cookies;
-    // console.log("AUTH MIDDLEWARE RUN");
+    console.log("AUTH MIDDLEWARE RUN");
+    console.log(accessToken);
+
     try {
         if (!accessToken) {
           throw new Error();

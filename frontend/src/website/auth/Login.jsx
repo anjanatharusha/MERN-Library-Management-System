@@ -25,6 +25,8 @@ const Login = () => {
     e.preventDefault();
     try {
       setStatus(STATUSES.LOADING);
+      // const { user, isAuth } = await login(formData);
+      // const data = { user, isAuth }
       const { data } = await login(formData);
       dispatch(setAuth(data));
       setStatus(STATUSES.IDLE);
