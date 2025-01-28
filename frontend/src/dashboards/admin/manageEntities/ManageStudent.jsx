@@ -166,14 +166,14 @@ const ManageStudent = () => {
       <div className="header">
         <h2>Manage Students</h2>
         <div>
-          <button
+          {/*<button
             className="btn btn__secondary"
             onClick={() => {
               setShowAddNewModel(true);
             }}
           >
             Add New
-          </button>
+          </button>*/} 
           <button className="btn btn__secondary" onClick={handleExport}>
             Export to CSV
           </button>
@@ -224,8 +224,8 @@ const ManageStudent = () => {
             <tr>
               <td>Roll Number</td>
               <td>Image</td>
-              <td>Name</td>
-              <td>Father Name</td>
+              <td>First Name</td>
+              <td>Last Name</td>
               <td>Email</td>
               <td>Actions</td>
             </tr>
@@ -319,10 +319,10 @@ const ManageStudent = () => {
             />
           </div>
           <div className="form-control">
-            <label htmlFor="fatherName">Father Name</label>
+            <label htmlFor="fatherName">Last Name</label>
             <input
               type="text"
-              placeholder="Enter father name"
+              placeholder="Enter last name"
               name="fatherName"
               className="bg text__color"
               value={formData.fatherName}
@@ -357,7 +357,7 @@ const ManageStudent = () => {
             />
           </div>
 
-          <div className="form-control">
+          {/* <div className="form-control">
             <label htmlFor="batch">Batch</label>
             <select
               name="batch"
@@ -397,7 +397,7 @@ const ManageStudent = () => {
                 );
               })}
             </select>
-          </div>
+            </div> */}
 
           <div className="actions">
             <button
@@ -434,10 +434,10 @@ const ManageStudent = () => {
             />
           </div>
           <div className="form-control">
-            <label htmlFor="fatherName">Father Name</label>
+            <label htmlFor="fatherName">Last Name</label>
             <input
               type="text"
-              placeholder="Enter father name"
+              placeholder="Enter last name"
               name="fatherName"
               className="bg text__color"
               value={formData.fatherName}
@@ -472,7 +472,7 @@ const ManageStudent = () => {
             />
           </div>
 
-          <div className="form-control">
+          {/* <div className="form-control">
             <label htmlFor="batch">Batch</label>
             <select
               name="batch"
@@ -512,7 +512,7 @@ const ManageStudent = () => {
                 );
               })}
             </select>
-          </div>
+          </div> */}
           <div className="actions">
             <button
               className="btn btn__danger"

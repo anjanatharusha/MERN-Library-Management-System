@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="top">
         <div className="box1">
           <div className="logo text__primary">
-            <GiBookAura className="icon" />
+            <logo className="icon" />
             <h4>Siri Vajirārāma Library</h4>
           </div>
           <p style={{ marginTop: "8px", lineHeight: "1.5rem" }}>
